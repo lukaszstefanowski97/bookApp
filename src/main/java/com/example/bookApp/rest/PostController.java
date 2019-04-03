@@ -28,12 +28,15 @@ public class PostController {
         if (!inputValidation.validateAuthor(book.getAuthor()) && inputValidation.validateIsbn(book.getIsbn())) {
             log.info(Constants.INVALID_ATTEMPT_MESSAGE);
             return Response.status(Response.Status.BAD_REQUEST).entity(Constants.INVALID_AUTHOR_MESSAGE).build();
+
         } else if (inputValidation.validateAuthor(book.getAuthor()) && !inputValidation.validateIsbn(book.getIsbn())) {
             log.info(Constants.INVALID_ATTEMPT_MESSAGE);
             return Response.status(Response.Status.BAD_REQUEST).entity(Constants.INVALID_ISBN_MESSAGE).build();
+
         } else if (!inputValidation.validateAuthor(book.getAuthor()) && !inputValidation.validateIsbn(book.getIsbn())) {
             log.info(Constants.INVALID_ATTEMPT_MESSAGE);
             return Response.status(Response.Status.BAD_REQUEST).entity(Constants.INVALID_INPUT_MESSAGE).build();
+
         } else {
             log.info(Constants.REQUEST_ACCEPTED_MESSAGE.replace('.', ':') + "\n" +
                     book.getAuthor() + "\n" + book.getTitle() + "\n" + book.getIsbn());
