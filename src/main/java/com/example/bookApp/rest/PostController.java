@@ -26,19 +26,20 @@ public class PostController {
     @RequestMapping(method = RequestMethod.POST, value = "/addBook")
     public Response addBook(@RequestBody Book book) {
         if (!inputValidation.validateAuthor(book.getAuthor()) && inputValidation.validateIsbn(book.getIsbn())) {
-            log.info("Attempt to save item with invalid input");
+            log.info(Constants.INVALID_ATTEMPT_MESSAGE);
             return Response.status(Response.Status.BAD_REQUEST).entity(Constants.INVALID_AUTHOR_MESSAGE).build();
         } else if (inputValidation.validateAuthor(book.getAuthor()) && !inputValidation.validateIsbn(book.getIsbn())) {
-            log.info("Attempt to save item with invalid input");
+            log.info(Constants.INVALID_ATTEMPT_MESSAGE);
             return Response.status(Response.Status.BAD_REQUEST).entity(Constants.INVALID_ISBN_MESSAGE).build();
         } else if (!inputValidation.validateAuthor(book.getAuthor()) && !inputValidation.validateIsbn(book.getIsbn())) {
-            log.info("Attempt to save item with invalid input");
+            log.info(Constants.INVALID_ATTEMPT_MESSAGE);
             return Response.status(Response.Status.BAD_REQUEST).entity(Constants.INVALID_INPUT_MESSAGE).build();
         } else {
-            log.info("Posted new item into book repository:\n" + book.getAuthor() + "\n" + book.getTitle() + "\n" +
-                    book.getIsbn());
+            log.info(Constants.REQUEST_ACCEPTED_MESSAGE.replace('.', ':') + "\n" +
+                    book.getAuthor() + "\n" + book.getTitle() + "\n" + book.getIsbn());
             bookSaverService.saveToRepository(book.getAuthor(), book.getTitle(), book.getIsbn());
-            return Response.status(Response.Status.OK).build();
+            ++Constants.entries;
+            return Response.status(Response.Status.OK).entity(Constants.REQUEST_ACCEPTED_MESSAGE).build();
         }
     }
 }

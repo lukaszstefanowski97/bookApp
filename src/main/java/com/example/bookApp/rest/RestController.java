@@ -1,13 +1,13 @@
 package com.example.bookApp.rest;
 
-import com.example.bookApp.dto.Book;
+import com.example.bookApp.config.Constants;
 import com.example.bookApp.service.BookGetterService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.List;
+import javax.ws.rs.core.Response;
 
 @org.springframework.web.bind.annotation.RestController
 @Slf4j
@@ -18,7 +18,9 @@ public class RestController {
     BookGetterService bookGetterService;
 
     @RequestMapping("/books")
-    public List<Book> getAllBooks() {
-        return bookGetterService.getAllBooks();
+    public <T> T getAllBooks() {
+        if (Constants.entries == 0) return (T) Response.status(Response.Status.NO_CONTENT)
+                .entity(Constants.NO_CONTENT_MESSAGE).build();
+        return (T) bookGetterService.getAllBooks();
     }
 }
