@@ -1,4 +1,4 @@
-package com.example.bookapp.bookapp;
+package com.example.bookApp;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,5 +12,4 @@ public class BookAppApplicationTests {
     @Test
     public void contextLoads() {
     }
-
 }
