@@ -17,8 +17,8 @@ public class RestController {
     BookGetterService bookGetterService;
 
     @RequestMapping("/hello")
-    public String hello() {
-        return "hello";
+    public String sayHello() {
+        return "Welcome to bookApp!";
     }
 
     @RequestMapping("/books")

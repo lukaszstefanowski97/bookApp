@@ -15,7 +15,7 @@ Build your Maven project by typing:
         mvn clean install
 
 
-You have to use this command in project's root directory. 
+You have to use this command in project's root directory. Both backend and frontend will be build by this one command.
 
 
 If everything went properly you should be able to run Spring application.
@@ -31,7 +31,7 @@ React frontend by typing:
 Endpoints are located in:
 
 
-        http://localhost:3000/
+        http://localhost:3000/hello
 
     
         http://localhost:3000/books
