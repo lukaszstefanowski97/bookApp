@@ -13,6 +13,5 @@ public class ApplicationEvent implements ApplicationListener<ApplicationReadyEve
 
     public void onApplicationEvent(ApplicationReadyEvent event) {
         log.info("Application is running...");
-        NpmRunner.runNpm();
     }
 }
