@@ -1,6 +1,6 @@
 # bookApp
 
-This app 
+This app is able to store book entries and expose them using REST API.
 
 **PREREQUISITES:**
 - Java 8 or higher
