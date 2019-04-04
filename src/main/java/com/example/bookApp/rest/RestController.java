@@ -16,6 +16,11 @@ public class RestController {
     @Autowired
     BookGetterService bookGetterService;
 
+    @RequestMapping("/hello")
+    public String hello() {
+        return "hello";
+    }
+
     @RequestMapping("/books")
     public <T> T getAllBooks() {
         if (Constants.entries == 0) {
