@@ -11,7 +11,7 @@ class App extends Component {
     }
 
     hello = () => {
-        fetch('/books')
+        fetch('/hello')
             .then(response => response.text())
             .then(message => {
                 this.setState({message: message});
