@@ -1,13 +1,12 @@
 package com.example.bookApp.rest;
 
 import com.example.bookApp.config.Constants;
+import com.example.bookApp.dto.ResponseObject;
 import com.example.bookApp.service.BookGetterService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import javax.ws.rs.core.Response;
 
 @org.springframework.web.bind.annotation.RestController
 @Slf4j
@@ -19,8 +18,12 @@ public class RestController {
 
     @RequestMapping("/books")
     public <T> T getAllBooks() {
-        if (Constants.entries == 0) return (T) Response.status(Response.Status.NO_CONTENT)
-                .entity(Constants.NO_CONTENT_MESSAGE).build();
+        if (Constants.entries == 0) {
+            ResponseObject responseObject =
+                    new ResponseObject(204, "No content", Constants.NO_CONTENT_MESSAGE);
+
+            return (T) responseObject;
+        }
         return (T) bookGetterService.getAllBooks();
     }
 }
