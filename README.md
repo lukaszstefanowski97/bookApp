@@ -15,7 +15,7 @@ Build your Maven project by typing:
         mvn clean install
 
 
-You have to use this command in project's root directory. Both backend and frontend will be build by this one command.
+You have to use this command in project's root directory. Both backend and frontend will be build by this one command so it could take a while. 
 
 
 If everything went properly you should be able to run Spring application.
