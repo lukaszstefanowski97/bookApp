@@ -18,6 +18,9 @@ export const books = {
     GET_BOOKS: 'GET_BOOKS',
     GET_BOOKS_SUCCESS: 'GET_BOOKS_SUCCESS',
     GET_BOOKS_FAILED: 'GET_BOOKS_FAILED',
+    ADD_BOOK: 'ADD_BOOK',
+    ADD_BOOK_SUCCESS: 'ADD_BOOK_SUCCESS',
+    ADD_BOOK_FAILED: 'ADD_BOOK_FAILED',
 };
 // Navigation
 export const navigation ={

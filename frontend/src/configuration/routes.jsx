@@ -18,7 +18,7 @@ const routes = (
     <NavigationWrapper>
         <Switch>
             {/* AUTH */}
-            {/*<Route exact path={paths.LOGIN_PAGE} render={() => isNotUser(<LogInPage/>)}/>*/}
+            <Route exact path={paths.LOGIN_PAGE} render={() => <LogInPage/>}/>
             {/* DASHBOARD */}
             <Route exact path={paths.DASHBOARD_PAGE} render={() => <DashboardPage/>}/>
             {/* BOOKS */}
