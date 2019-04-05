@@ -16,7 +16,5 @@ public class Constants {
 
     public static final String NO_CONTENT_MESSAGE = "No records";
 
-    public static final String HELLO_MESSAGE_NO_RECORDS = "Welcome to bookApp!\nNo records";
-
     public static final String HELLO_MESSAGE = "Welcome to bookApp!";
 }

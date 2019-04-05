@@ -21,7 +21,7 @@ public class RestController {
 
     @RequestMapping("/hello")
     public String sayHello() {
-        return Constants.entries == 0 ? Constants.HELLO_MESSAGE_NO_RECORDS : Constants.HELLO_MESSAGE;
+        return Constants.HELLO_MESSAGE;
     }
 
     @RequestMapping("/books")
