@@ -33,3 +33,14 @@ You can also use backend api. Endpoints are located in:
 
 
         http://localhost:8080/api/addBook for post method
+
+
+Name and surname should both start with a letter 'A'. ISBN number should be 13 digits long integer.
+
+Example json file for post request to api: 
+
+    {
+        "author": "Adam Adam",
+        "title": "Steppenwolf",
+        "isbn": "1234567898765"
+    }
