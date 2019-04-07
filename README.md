@@ -37,7 +37,7 @@ You can also use backend api. Endpoints are located in:
 
 Name and surname should both start with a letter 'A'. ISBN number should be 13 digits long integer.
 
-Example json file for post request to api: 
+Example of a proper json file for post request to api: 
 
     {
         "author": "Adam Adam",
