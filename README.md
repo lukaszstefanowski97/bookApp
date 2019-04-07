@@ -46,9 +46,7 @@ Example of a proper json file for post request to api:
         "isbn": "1234567898765"
     }
 
-This app is also running on Docker. Please type the command below to build your docker image:
-(you have to to this after building a project with mvn clean install)
-
+This app is also running on Docker. Please type the command below (only if you build a project first) to build your docker image:
 
     
         docker build -t bookapp .
