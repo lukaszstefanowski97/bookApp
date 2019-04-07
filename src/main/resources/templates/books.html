@@ -26,23 +26,6 @@
                         <center><h3 th:text="${noContent}"/></center>
                     </th>
                 </tr>
-                <tr>
-                    <div th:if="${not #lists.isEmpty(books)}">
-                        <center><h2>List of books</h2></center>
-                        <table class="table table-striped">
-                            <tr>
-                                <th>Author</th>
-                                <th>Title</th>
-                                <th>ISBN</th>
-                            </tr>
-                            <tr th:each="book : ${books}">
-                                <td th:text="${book.author}"></td>
-                                <td th:text="${book.title}"></td>
-                                <td th:text="${book.isbn}"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </tr>
             </table>
         </div>
         <div th:if="${not #lists.isEmpty(books)}">
