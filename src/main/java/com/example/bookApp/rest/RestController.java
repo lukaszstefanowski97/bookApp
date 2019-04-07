@@ -64,6 +64,8 @@ public class RestController {
 
     @RequestMapping("/books")
     public <T> T getAllBooks() {
+        log.info("Getting list of books...");
+
         if (Constants.entries == 0) {
             ResponseObject responseObject =
                     new ResponseObject(204, "No content", Constants.NO_CONTENT_MESSAGE);

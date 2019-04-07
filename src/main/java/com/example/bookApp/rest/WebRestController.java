@@ -29,6 +29,7 @@ public class WebRestController {
 
     @RequestMapping("/")
     public String getAllBooks(Model model) {
+        log.info("Getting list of books...");
         model.addAttribute("helloMessage", Constants.HELLO_MESSAGE);
         model.addAttribute("noContent", Constants.NO_CONTENT_MESSAGE);
         model.addAttribute("books", bookGetterService.getAllBooks());
