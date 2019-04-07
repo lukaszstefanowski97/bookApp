@@ -4,8 +4,9 @@ public class Constants {
 
     public static int entries = 0;
 
-    public static final String INVALID_AUTHOR_MESSAGE = "Invalid author input. Forename and surename should start " +
-            "with 'A'.";
+    public static final String INVALID_AUTHOR_MESSAGE = "Invalid author input. Forename and surename should both " +
+            "start with 'A'.";
+
     public static final String INVALID_ISBN_MESSAGE = "Invalid ISBN input. ISBN number should be given as string with" +
             " length of 13 " +
             "digits and it should be integer.";
