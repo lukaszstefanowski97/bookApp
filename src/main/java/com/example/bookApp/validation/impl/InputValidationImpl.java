@@ -11,7 +11,7 @@ public class InputValidationImpl implements InputValidation {
     @Override
     public Boolean validateAuthor(String author) {
         int secondNameIndex = 0;
-        for (int i = 0; i < author.length(); i++) {
+        for (int i = 0; i < author.length() - 1; i++) {
             if (author.charAt(i) == ' ') secondNameIndex = i + 1;
         }
         return author.startsWith("A") && author.charAt(secondNameIndex) == 'A';
