@@ -13,5 +13,6 @@ public class ApplicationEvent implements ApplicationListener<ApplicationReadyEve
 
     public void onApplicationEvent(ApplicationReadyEvent event) {
         log.info("Application is running...");
+        log.info("Listening on http://localhost:8080...");
     }
 }
