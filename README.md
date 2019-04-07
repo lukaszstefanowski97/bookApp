@@ -6,6 +6,7 @@ This app is able to store book entries and expose them using REST API.
 - Java 8 or higher
 - Spring
 - Maven
+- (optional) Docker
 
 **Creation of project environment**
 
@@ -44,3 +45,21 @@ Example of a proper json file for post request to api:
         "title": "Steppenwolf",
         "isbn": "1234567898765"
     }
+
+This app is also running on Docker. Please type the command below to build your docker image:
+(you have to to this after building a project with mvn clean install)
+
+
+    
+        docker build -t bookapp .
+        
+        
+Then please run the image. Running command:
+
+    
+        docker run -p 8080:8080 bookapp
+        
+        
+
+
+
