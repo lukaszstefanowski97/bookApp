@@ -22,7 +22,7 @@ If everything went properly you should be able to run Spring application.
 You can use the app in your browser by going to:
 
     
-        http://localhost:3000/books
+        http://localhost:3000/
 
 
 
