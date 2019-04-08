@@ -6,7 +6,7 @@ This app is able to store book entries and expose them using REST API.
 - Java 8 or higher
 - Spring
 - Maven
-- (optional) Docker
+- (optional) [Docker](https://www.docker.com)
 
 **Creation of project environment**
 
