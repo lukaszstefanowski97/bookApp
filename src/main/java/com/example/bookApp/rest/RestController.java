@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
 @Slf4j
-
 public class RestController {
 
     @Autowired
